@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>Mi Web en GitHub Pages</title> <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
 <header id="js-header">
@@ -16,8 +17,18 @@
               <a class="headerLink" href="#biltong">COLABORA</a>
           </nav>
       </div>
-  </header>
-  <div class="flag">
-    <img class="flag-img" src="img/Header.png" alt="flag"/>
-  </div>
+    </header>
+    <div class="flag">
+        <img class="flag-img" src="img/Header.png" alt="flag"/>
+    </div>
+    <div class="social-bar"> 
+        <a href="https://www.instagram.com/almazuelarevista/" target="_blank"> <img src="img/Instagram.png" alt="Instagram" class="social-icon"> </a>
+        <a href="https://www.tiktok.com/@almazuelarevista" target="_blank"> <img src="img/Tiktok.png" alt="Tiktok" class="social-icon"> </a> 
+    </div>
+    <div class="selector">
+        <button class="selector-btn active" data-filter="todos">Todos</button>
+    </div>
+    <div id="articles-container" class="articles-grid"></div>
+    
+    <script src="script.js"></script>
 </body>

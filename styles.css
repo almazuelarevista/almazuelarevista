@@ -97,7 +97,6 @@ header h1#logo {
    margin: 0;
    padding:0 1em;
    background-color:#fd5559;
-	float: left;
 	font-family: "Open Sans", sans-serif;
 	font-size: 60px;
 	color: #fcfcfc;
@@ -112,7 +111,6 @@ header h1#logo {
 
 header nav {
 	display: inline-block;
-	float: right;
 }
 
 header nav a {
@@ -274,7 +272,6 @@ footer ul li {
   footer ul li {
     display:inline-block;
     margin:0 0.5em;
-    float:left;
   }
 
 }
@@ -303,3 +300,74 @@ footer ul li {
     height: auto; 
     display: block;
 }
+
+.social-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+.selector {
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+.selector-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background: #D7351F;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.selector-btn.active {
+    background: #A02015;
+}
+
+.articles-grid {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.articles {
+    cursor: pointer;
+}
+
+.articles img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.articles .meta {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+.articles .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
