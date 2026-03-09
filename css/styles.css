@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #fcfcfc;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #F9D3E6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.3s;
+}
+
+#logo {
+    margin-left: 5%;
+    font-family: Impact;
+    font-size: 60px;
+    font-weight: 400;
+    color: #D7351F;
+    line-height: 1;
+    transition: all 0.3s;
+}
+
+header nav {
+    margin-right: 15%;
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    font-family: "Segoe UI";
+    font-size: 24px;
+    color: #D7351F;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.headerLinkSelected {
+    font-weight: 700;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+header.smaller {
+    height: 75px;
+}
+
+header.smaller #logo {
+    font-size: 35px;
+    line-height: 75px;
+}
+
+header.smaller nav a {
+    line-height: 75px;
+}
+
+
+.social-bar {
+    position: fixed;
+    top: 110px;
+    right: 5%;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+footer {
+    background-color: #3c3c3c;
+    text-align: center;
+    min-height: 17em;
+    color: #bababa;
+}
+
+footer a {
+    text-decoration: underline;
+    color: #bababa;
+}
+
+footer a:hover {
+    color: #fd5559;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 2em;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 760px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header h1#logo {
+        margin-left: 0;
+        text-align: center;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    header nav {
+        margin-right: 0;
+        gap: 15px;
+    }
+
+    header nav a {
+        line-height: 40px;
+    }
+
+    .social-bar {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer a {
+        display: block;
+    }
+}
+
+.flag {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+.flag-img {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+.social-bar {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+
+.selector {
+    margin: 40px auto 20px auto;
+    width: 90%;
+    display: flex;
+    gap: 40px;
+    padding-bottom: 12px;
+    border-bottom: 6px solid #D7351F;
+}
+
+.selector-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-family: 'Segoe UI';
+    color: #888;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.selector-btn:hover {
+    color: #D7351F;
+}
+
+.selector-btn.active {
+    color: #D7351F;
+}
+
+.selector-btn.active::after {
+    content: none;
+}
+
+.articles-grid {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.articles {
+    cursor: pointer;
+    font-family: "Segoe UI";
+}
+
+.articles img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.articles .meta {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    font-family: "Segoe UI";
+}
+
+.articles .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: "Segoe UI";
+}
+
+.article-wrapper {
+    width: 33%;
+    margin: 150px auto;
+    font-family: "Segoe UI";
+    color: black;
+}
+
+.article-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.article-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #D7351F;
+    margin-bottom: 20px;
+}
+
+.article-body {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.article-image {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.article-caption {
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+
