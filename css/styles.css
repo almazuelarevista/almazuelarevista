@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Bright Sunshine";
+    src: url("../fonts/BrightSunshineDemo.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -164,7 +171,7 @@ footer ul li {
 
 .flag {
     position: relative;
-    margin-top: 100px;
+    margin-top: 70px;
     width: 100%;
     z-index: 1;
 }
@@ -306,4 +313,218 @@ footer ul li {
     margin-bottom: 40px;
 }
 
+/* --- ABOUT US PAGE --- */
 
+.about-wrapper {
+    width: 50%;
+    margin: 180px auto 120px;
+    font-family: "Segoe UI";
+    color: black;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 70px;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #D7351F;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.about-title-2 {
+    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
+    font-size: 200px;
+    font-weight: normal;
+    color: #D7351F;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-subtitle {
+    font-size: 60px;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-body {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-image {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* --- MAGAZINE --- */
+
+.magazine-wrapper {
+    width: 70%;
+    margin: 180px auto 120px;
+    font-family: "Segoe UI";
+    color: black;
+    text-align: center;
+}
+
+.magazine-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.magazine-item {
+    text-align: center;
+}
+
+.magazine-number {
+    font-size: 70px;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #D7351F;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.magazine-name {
+    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
+    font-size: 70px;
+    font-weight: normal;
+    color: #D7351F;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.magazine-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.magazine-image:hover {
+    transform: scale(1.05);
+}
+
+
+.magazine-link {
+    font-size: 18px;
+    color: #D7351F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- COLLABORATE --- */
+
+.collaborate {
+  width: 60vw;
+  max-width: none;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+.collaborate-mail-link {
+  color: inherit !important;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline !important;
+  margin: 0 !important;
+}
+
+.collaborators-title,
+.intro-section p {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.intro-section a {
+  display: block;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.intro-section a.collaborate-mail-link {
+  display: inline;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+  margin: 0;
+  text-align: inherit;
+  text-decoration: none;
+}
+
+.intro-section a:hover {
+  text-decoration: underline;
+}
+
+.collaborators-title {
+  width: 60vw;
+  margin: 40px auto 20px auto;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.contributors-section {
+  width: 80vw;
+  margin: 20px auto 60px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+.contributor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  text-align: center;
+}
+
+.contributor img {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.contributor-name {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 8px 0 2px 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.contributor-role {
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
