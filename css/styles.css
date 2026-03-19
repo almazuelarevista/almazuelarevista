@@ -365,6 +365,25 @@ footer ul li {
     margin-top: 20px;
 }
 
+.about-body-2 {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-body-3 {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #D7351F;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* --- MAGAZINE --- */
 
 .magazine-wrapper {
