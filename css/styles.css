@@ -498,6 +498,11 @@ footer ul li {
   text-decoration: underline;
 }
 
+.contribute-image {
+    width: 35%;
+    margin-top: 10px;
+}
+
 .collaborators-title {
   width: 60vw;
   margin: 40px auto 20px auto;
