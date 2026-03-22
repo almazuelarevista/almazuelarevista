@@ -11,26 +11,26 @@
 
 @font-face {
     font-family: "SegoeCustom";
-    src: url("fonts/segoeuitihs.ttf") format("truetype");
+    src: url("../fonts/segoeuithis.ttf") format("truetype");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "SegoeCustom";
-    src: url("fonts/segoeuitihbd.ttf") format("truetype");
+    src: url("../fonts/segoeuithibd.ttf") format("truetype");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "SegoeCustom";
-    src: url("fonts/segoeuitihsi.ttf") format("truetype");
+    src: url("../fonts/segoeuithisi.ttf") format("truetype");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "SegoeCustom";
-    src: url("fonts/segoeuitihsz.ttf") format("truetype");
+    src: url("../fonts/segoeuithisz.ttf") format("truetype");
     font-weight: 300;
 }
 
