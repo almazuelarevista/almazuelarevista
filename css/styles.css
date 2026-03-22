@@ -60,13 +60,18 @@
 }
 
 html {
-    color-scheme: only light;
+    color-scheme: light !important;
+    background-color: #ffffff !important;
 }
 
 html, body {
     forced-color-adjust: none !important;
     background-color: #ffffff !important;
     color: #000000 !important;
+}
+
+html, body, #root, main {
+    background: #ffffff !important;
 }
 
 *,
