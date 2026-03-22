@@ -60,7 +60,13 @@
 }
 
 html {
-    forced-color-adjust: none;
+    color-scheme: only light;
+}
+
+html, body {
+    forced-color-adjust: none !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
 *,
