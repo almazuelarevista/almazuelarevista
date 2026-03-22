@@ -55,6 +55,13 @@
     font-style: normal;
 }
 
+:root {
+    color-scheme: light;
+}
+
+html {
+    forced-color-adjust: none;
+}
 
 *,
 *::before,
