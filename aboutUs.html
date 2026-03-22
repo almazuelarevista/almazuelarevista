@@ -2,15 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Somos – Almazuela</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Somos · Almazuela</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
     <header id="js-header">
-        <h1 id="logo">ALMAZUELA</h1>
-        <nav>
+        <h1 id="logo">
+            <a href="aboutUs.html">ALMAZUELA</a>
+        </h1>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav id="mobileMenu">
             <a class="headerLink" href="index.html">ARTÍCULOS</a>
             <a class="headerLinkSelected">SOMOS</a>
             <a class="headerLink" href="magazine.html">LA REVISTA</a>
@@ -39,41 +44,61 @@
         <p class="about-body">
             Almazuela es una revista, un proyecto de comunicación cultural y una herramienta para conectarnos con nuestra tierra. Es la materialización de un TFM y, sobre todo, es la <strong>integración de las diferentes realidades de La Rioja</strong>, es la difusión de un patrimonio y la apuesta por la cultura en una región de población reducida y diversa.
         </p>
-        
 
-        <img class="about-image" src="img/aboutus1.png"alt="Nuria y Patri">
-
-        </div>
-        </div>
+        <img class="about-image" src="img/aboutus1.png" alt="Nuria y Patri">
 
         <p class="about-body-2">
-            Más allá de un conjunto de entrevistas y reportajes, Almazuela es la fusión de aquello que Carmen, Jesús e Iñaki cantaban en 1977: “La Rioja existe pero no es, si nos unimos la hemos de hacer”; junto con los versos del himno de Logroño que cada año miles de personas interpretan en la plaza del Ayuntamiento: “Logroño es joven y antiguo, es pasado y es progreso”.  <strong>Es la unión de los valores, las tradiciones, la modernidad y las nuevas creaciones riojanas.</strong>
-         <p class="about-body-2">   
-            El objetivo de este proyecto no consiste en promocionar La Rioja en el exterior, aunque se prefiera un turismo que vaya más allá del vino y la fiesta barata; sino en que su población conozca mejor lo que sucede en la región y se pueda sentir parte de ello. Desde luego que no hay nada de malo en bajar a Madrid para asistir a un concierto o en desplazarse a Barcelona para ver un festival de cortometrajes; al contrario, <strong>la cultura y el arte siempre son enriquecedores.</strong> Pero desde Almazuela se busca dar acceso cultural a quienes no quieren o no pueden desplazarse de la provincia, que la población riojana sepa lo que ocurre en el pueblo de al lado, qué libro ha escrito su vecina o qué artistas vienen a la sierra el próximo fin de semana. 
-         <p class="about-body-2"> 
+            Más allá de un conjunto de entrevistas y reportajes, Almazuela es la fusión de aquello que Carmen, Jesús e Iñaki cantaban en 1977: “La Rioja existe pero no es, si nos unimos la hemos de hacer”; junto con los versos del himno de Logroño que cada año miles de personas interpretan en la plaza del Ayuntamiento: “Logroño es joven y antiguo, es pasado y es progreso”.  
+            <strong>Es la unión de los valores, las tradiciones, la modernidad y las nuevas creaciones riojanas.</strong>
+        </p>
+
+        <p class="about-body-2">
+            El objetivo de este proyecto no consiste en promocionar La Rioja en el exterior, aunque se prefiera un turismo que vaya más allá del vino y la fiesta barata; sino en que su población conozca mejor lo que sucede en la región y se pueda sentir parte de ello. Desde luego que no hay nada de malo en bajar a Madrid para asistir a un concierto o en desplazarse a Barcelona para ver un festival de cortometrajes; al contrario, <strong>la cultura y el arte siempre son enriquecedores.</strong> Pero desde Almazuela se busca dar acceso cultural a quienes no quieren o no pueden desplazarse de la provincia, que la población riojana sepa lo que ocurre en el pueblo de al lado, qué libro ha escrito su vecina o qué artistas vienen a la sierra el próximo fin de semana.
+        </p>
+
+        <p class="about-body-2">
             Por todo ello, <strong>los artículos de Almazuela, aunque variados en cuanto a contenido y forma, siempre estarán relacionados con La Rioja y su industria cultural, tejido asociativo, tradiciones o formas de vida.</strong> Además, esta es una <strong>revista antirracista y feminista;</strong> de todas y para todas las personas que viven en la comunidad, sea cual sea su origen; y, por qué no, también para quienes la visitan.
-        <p class="about-body-3"> 
-            <strong>“Nadie en Logroño se siente extranjero”, dice su himno. Tampoco en Almazuela.
-</strong>
-    <script src="js/header.js"></script>
+        </p>
+
+        <p class="about-body-3">
+            <strong>“Nadie en Logroño se siente extranjero”, dice su himno. Tampoco en Almazuela.</strong>
+        </p>
+
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="about-wrapper">
 
         <h1 class="about-title-3">el equipo de</h1>
         <h1 class="about-title-4">ALMAZUELA</h1>
+
+        <img class="team-leader" src="img/nuriaypatri1.jpg" alt="Nuria y Patri">
+        <p class="team-role">Patri y Nuria, directoras y autoras del proyecto</p>
+
+        <div class="team-section">
+
+            <div class="team-member">
+                <img src="img/Samuel.JPG" alt="Samuel">
+                <p class="team-role">Samuel, desarrollador web</p>
+            </div>
+
+            <div class="team-member">
+                <img src="img/Matilde.JPG" alt="Abuela Matilde">
+                <p class="team-role">Abuela Matilde, costurera y modelo de Almazuela</p>
+            </div>
+
+            <div class="team-member">
+                <img src="img/Carmen.JPG" alt="Carmen">
+                <p class="team-role">Carmen, diseñadora gráfica</p>
+            </div>
+
         </div>
 
+    </section>
 
-        <img class="about-image" src="img/nuriaypatri1.jpg"alt="Nuria y Patri">
-     <p class="contributor-role">Patri y Nuria, directoras y autoras del proyecto</p>
+    <script src="js/header.js"></script>
 
-
-    <div class="contributor">
-        <img src="img/Samuel.JPG" alt="">
-        <p class="contributor-role">Samuel, desarrollador web</p>
-
-
-    </div>
-    </div>
-    </div>
-    </body>
+</body>
 </html>
+
 

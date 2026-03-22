@@ -1,3 +1,7 @@
+/* --------------------------------------------- */
+/* RESET + GLOBAL */
+/* --------------------------------------------- */
+
 @font-face {
     font-family: "Bright Sunshine";
     src: url("../fonts/BrightSunshineDemo.ttf") format("truetype");
@@ -5,14 +9,15 @@
     font-style: normal;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -20,15 +25,20 @@ a {
     color: #fcfcfc;
     font-weight: 300;
     transition: color 0.3s;
+    font-size: clamp(14px, 0.9vw, 20px);
 }
 
 a:hover {
     color: #fff;
 }
 
+/* --------------------------------------------- */
+/* HEADER */
+/* --------------------------------------------- */
+
 header {
     width: 100%;
-    height: 100px;
+    height: clamp(70px, 4vw, 100px);
     position: fixed;
     top: 0;
     left: 0;
@@ -37,186 +47,126 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: height 0.3s;
+    padding: 0 clamp(10px, 2vw, 40px);
 }
 
 #logo {
-    margin-left: 5%;
+    margin-left: clamp(10px, 3vw, 125px);
     font-family: Impact;
-    font-size: 60px;
+    font-size: clamp(32px, 2.4vw, 60px);
     font-weight: 400;
     color: #D7351F;
     line-height: 1;
-    transition: all 0.3s;
 }
 
-header nav {
-    margin-right: 15%;
+#logo a {
+    all: inherit;         
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+#mobileMenu {
     display: flex;
-    gap: 30px;
+    margin-right: clamp(10px, 6vw, 375px);
+    gap: clamp(10px, 1.2vw, 30px);
 }
 
-header nav a {
+#mobileMenu a {
     font-family: "Segoe UI";
-    font-size: 24px;
+    font-size: clamp(18px, 1.2vw, 24px);
     color: #D7351F;
     font-weight: 400;
-    transition: color 0.3s;
 }
 
 .headerLinkSelected {
-    font-weight: 700;
+    font-weight: 800 !important;
+} 
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: clamp(28px, 1.6vw, 40px);
+    color: #D7351F;
+    cursor: pointer;
+    margin-right: clamp(10px, 2vw, 40px);
 }
 
-header nav a:hover {
-    color: #fff;
-}
+/* HEADER SCROLL */
 
 header.smaller {
-    height: 75px;
+    height: clamp(60px, 3vw, 75px);
 }
 
 header.smaller #logo {
-    font-size: 35px;
-    line-height: 75px;
+    font-size: clamp(24px, 1.4vw, 35px);
 }
 
-header.smaller nav a {
-    line-height: 75px;
+header.smaller #mobileMenu a {
+    line-height: clamp(30px, 2vw, 75px);
 }
 
+/* --------------------------------------------- */
+/* SOCIAL BAR */
+/* --------------------------------------------- */
 
 .social-bar {
-    position: fixed;
-    top: 110px;
-    right: 5%;
+    position: absolute;
+    top: 100%;
+    right: clamp(10px, 3vw, 80px);
+    margin-top: clamp(10px, 1vw, 20px);
     display: flex;
-    gap: 20px;
+    gap: clamp(10px, 1.2vw, 20px);
 }
 
 .social-icon {
-    width: 35px;
-    height: 35px;
+    width: clamp(20px, 2vw, 35px);
+    height: clamp(20px, 2vw, 35px);
     object-fit: contain;
     cursor: pointer;
     transition: transform 0.2s;
+    border-radius: clamp(2px, 0.4vw, 6px);
 }
 
 .social-icon:hover {
     transform: scale(1.15);
 }
 
-footer {
-    background-color: #3c3c3c;
-    text-align: center;
-    min-height: 17em;
-    color: #bababa;
-}
-
-footer a {
-    text-decoration: underline;
-    color: #bababa;
-}
-
-footer a:hover {
-    color: #fd5559;
-}
-
-footer ul {
-    list-style: none;
-    margin-top: 2em;
-    padding: 0;
-}
-
-footer ul li {
-    margin: 0;
-    padding: 0;
-}
-
-@media (max-width: 760px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-
-    header h1#logo {
-        margin-left: 0;
-        text-align: center;
-        font-size: 40px;
-        line-height: 1.2;
-    }
-
-    header nav {
-        margin-right: 0;
-        gap: 15px;
-    }
-
-    header nav a {
-        line-height: 40px;
-    }
-
-    .social-bar {
-        position: static;
-        justify-content: center;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 600px) {
-    footer a {
-        display: block;
-    }
-}
+/* --------------------------------------------- */
+/* FLAG SECTION */
+/* --------------------------------------------- */
 
 .flag {
     position: relative;
-    margin-top: 70px;
+    margin-top: clamp(40px, 3vw, 70px);
     width: 100%;
     z-index: 1;
 }
 
 .flag-img {
     width: 100%;
-    height: auto; 
+    height: auto;
     display: block;
 }
 
-.social-bar {
-    position: absolute;
-    top: 100%;
-    right: 5%;
-    margin-top: 10px;
-    display: flex;
-    gap: 20px;
-}
-
-.social-icon {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.15);
-}
-
+/* --------------------------------------------- */
+/* SELECTOR SUPERIOR */
+/* --------------------------------------------- */
 
 .selector {
-    margin: 40px auto 20px auto;
+    margin: clamp(20px, 3vw, 40px) auto clamp(10px, 2vw, 20px) auto;
     width: 90%;
     display: flex;
-    gap: 40px;
-    padding-bottom: 12px;
-    border-bottom: 6px solid #D7351F;
+    gap: clamp(20px, 3vw, 40px);
+    padding-bottom: clamp(6px, 0.6vw, 12px);
+    border-bottom: clamp(3px, 0.6vw, 6px) solid #D7351F;
 }
 
 .selector-btn {
     background: none;
     border: none;
-    font-size: 22px;
+    font-size: clamp(16px, 1.2vw, 22px);
     font-family: 'Segoe UI';
     color: #888;
     cursor: pointer;
@@ -232,16 +182,16 @@ footer ul li {
     color: #D7351F;
 }
 
-.selector-btn.active::after {
-    content: none;
-}
+/* --------------------------------------------- */
+/* ARTICLES GRID */
+/* --------------------------------------------- */
 
 .articles-grid {
     width: 90%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: clamp(20px, 3vw, 40px);
 }
 
 .articles {
@@ -252,164 +202,76 @@ footer ul li {
 .articles img {
     width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-radius: clamp(2px, 0.4vw, 6px);
 }
 
 .articles .meta {
-    font-size: 14px;
+    font-size: clamp(12px, 0.8vw, 14px);
     color: #555;
-    margin-top: 8px;
-    font-family: "Segoe UI";
+    margin-top: clamp(4px, 0.6vw, 8px);
 }
 
 .articles .titulo {
-    font-size: 20px;
+    font-size: clamp(16px, 1.2vw, 20px);
     font-weight: bold;
-    margin-top: 10px;
-    font-family: "Segoe UI";
+    margin-top: clamp(6px, 0.8vw, 10px);
 }
 
+/* --------------------------------------------- */
+/* ARTICLE PAGE */
+/* --------------------------------------------- */
+
 .article-wrapper {
-    width: 33%;
-    margin: 150px auto;
+    width: clamp(260px, 33%, 900px);
+    margin: clamp(80px, 10vw, 150px) auto;
     font-family: "Segoe UI";
     color: black;
 }
 
 .article-title {
-    font-size: 36px;
+    font-size: clamp(24px, 2vw, 36px);
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: clamp(6px, 0.8vw, 10px);
 }
 
 .article-meta {
-    font-size: 14px;
+    font-size: clamp(12px, 0.8vw, 14px);
     color: #777;
-    margin-bottom: 25px;
+    margin-bottom: clamp(15px, 1.6vw, 25px);
 }
 
 .article-subtitle {
-    font-size: 24px;
+    font-size: clamp(18px, 1.6vw, 24px);
     font-weight: 700;
     color: #D7351F;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 1.2vw, 20px);
 }
 
 .article-body {
-    font-size: 18px;
+    font-size: clamp(14px, 1.2vw, 18px);
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 2vw, 30px);
 }
 
 .article-image {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: clamp(4px, 0.6vw, 5px);
 }
 
 .article-caption {
-    font-size: 14px;
+    font-size: clamp(12px, 0.8vw, 14px);
     font-style: italic;
     color: #555;
-    margin-bottom: 40px;
+    margin-bottom: clamp(20px, 3vw, 40px);
 }
 
-/* --- ABOUT US PAGE --- */
-
-.about-wrapper {
-    width: 50%;
-    margin: 180px auto 120px;
-    font-family: "Segoe UI";
-    color: black;
-    text-align: center;
-}
-
-.about-title {
-    font-size: 70px;
-    font-weight: 500;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #D7351F;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-.about-title-2 {
-    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
-    font-size: 200px;
-    font-weight: normal;
-    color: #D7351F;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.about-title-3 {
-    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
-    font-size: 100px;
-    font-weight: normal;
-    color: #D7351F;
-    margin-top: 0px;
-    margin-bottom: -30px;
-    text-align: center;
-}
-
-.about-title-4 {
-    font-size: 70px;
-    font-weight: 500;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #D7351F;
-    margin-top: -30px;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-
-.about-subtitle {
-    font-size: 60px;
-    font-weight: 500;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #000;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.about-body {
-    font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-image {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.about-body-2 {
-    font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-body-3 {
-    font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    color: #D7351F;
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- MAGAZINE --- */
+/* --------------------------------------------- */
+/* MAGAZINE */
+/* --------------------------------------------- */
 
 .magazine-wrapper {
-    width: 70%;
-    margin: 180px auto 120px;
+    width: clamp(300px, 70%, 1800px);
+    margin: clamp(120px, 12vw, 180px) auto clamp(80px, 8vw, 120px);
     font-family: "Segoe UI";
     color: black;
     text-align: center;
@@ -418,7 +280,7 @@ footer ul li {
 .magazine-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: clamp(30px, 4vw, 60px);
 }
 
 .magazine-item {
@@ -426,144 +288,308 @@ footer ul li {
 }
 
 .magazine-number {
-    font-size: 70px;
+    font-size: clamp(40px, 3vw, 70px);
     font-weight: 500;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #D7351F;
-    margin-bottom: 0px;
-    text-align: center;
+    margin-bottom: 0;
 }
 
 .magazine-name {
     font-family: "Bright Sunshine", "Segoe UI", sans-serif;
-    font-size: 70px;
+    font-size: clamp(40px, 4vw, 70px);
     font-weight: normal;
     color: #D7351F;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-top: 0;
+    margin-bottom: clamp(10px, 2vw, 30px);
 }
 
 .magazine-image {
     width: 100%;
-    max-width: 420px;
+    max-width: clamp(200px, 16vw, 420px);
     height: auto;
-    margin: 0 auto 15px;
+    margin: 0 auto clamp(10px, 1.2vw, 15px);
     display: block;
     object-fit: contain;
     transition: transform 0.3s ease;
+    border-radius: clamp(2px, 0.4vw, 6px);
 }
 
 .magazine-image:hover {
     transform: scale(1.05);
 }
 
-
 .magazine-link {
-    font-size: 18px;
+    font-size: clamp(14px, 1.2vw, 18px);
     color: #D7351F;
     text-decoration: none;
     font-weight: 600;
 }
 
-/* --- COLLABORATE --- */
+/* --------------------------------------------- */
+/* ABOUT US */
+/* --------------------------------------------- */
+
+.about-wrapper {
+    width: clamp(300px, 50%, 1250px);
+    margin: clamp(120px, 12vw, 180px) auto clamp(80px, 8vw, 120px);
+    font-family: "Segoe UI";
+    color: black;
+    text-align: center;
+}
+
+.about-title {
+    font-size: clamp(40px, 3vw, 70px);
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #D7351F;
+    margin-bottom: 0;
+}
+
+.about-title-2 {
+    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
+    font-size: clamp(80px, 8vw, 200px);
+    color: #D7351F;
+    margin-top: 0;
+    margin-bottom: clamp(10px, 2vw, 30px);
+}
+
+.about-title-3 {
+    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
+    font-size: clamp(50px, 4vw, 100px);
+    color: #D7351F;
+    margin-top: 0;
+    margin-bottom: clamp(-20px, -1vw, -30px);
+}
+
+.about-title-4 {
+    font-size: clamp(40px, 3vw, 70px);
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #D7351F;
+    margin-top: clamp(-20px, -1vw, -30px);
+    margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.about-body,
+.about-body-2,
+.about-body-3 {
+    font-size: clamp(14px, 1.2vw, 20px);
+    line-height: 1.7;
+    margin-bottom: clamp(15px, 1.6vw, 25px);
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-body-3 {
+    color: #D7351F;
+}
+
+.about-image {
+    width: 100%;
+    height: clamp(250px, 22vw, 550px);
+    object-fit: cover;
+    display: block;
+    margin: clamp(20px, 3vw, 40px) 0;
+    border-radius: clamp(2px, 0.4vw, 6px);
+}
+
+/* --------------------------------------------- */
+/* TEAM SECTION */
+/* --------------------------------------------- */
+
+.team-section {
+    width: 100%;
+    margin: clamp(40px, 4vw, 60px) auto clamp(80px, 8vw, 120px);
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(20px, 3vw, 40px);
+}
+
+.team-leader {
+    width: 100%;
+    height: clamp(250px, 22vw, 550px);
+    object-fit: cover;
+    display: block;
+    margin-top: clamp(20px, 3vw, 40px);
+    margin-bottom: clamp(6px, 0.8vw, 10px);
+    border-radius: clamp(2px, 0.4vw, 6px);
+}
+
+.team-member {
+    width: 33%;
+    text-align: center;
+    font-family: "Segoe UI";
+}
+
+.team-member img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: clamp(2px, 0.4vw, 6px);
+    margin-bottom: clamp(6px, 0.8vw, 10px);
+}
+
+.team-role {
+    font-size: clamp(12px, 1vw, 16px);
+    line-height: 1.4;
+    margin-top: clamp(4px, 0.6vw, 5px);
+}
+
+/* --------------------------------------------- */
+/* COLLABORATE */
+/* --------------------------------------------- */
 
 .collaborate {
-  width: 60vw;
-  max-width: none;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-family: "Inter", sans-serif;
-  color: #222;
+    width: clamp(300px, 60vw, 1500px);
+    margin: clamp(20px, 4vw, 40px) auto;
+    padding: 0 clamp(10px, 2vw, 20px);
+    font-family: "Inter", sans-serif;
+    color: #222;
 }
 
 .collaborate-mail-link {
-  color: inherit !important;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline !important;
-  margin: 0 !important;
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.collaborators-title,
 .intro-section p {
-  font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: justify;
+    font-size: clamp(14px, 1.2vw, 20px);
+    line-height: 1.6;
+    margin-bottom: clamp(10px, 2vw, 20px);
+    text-align: justify;
 }
 
 .intro-section a {
-  display: block;
-  text-align: center;
-  font-size: 60px;
-  font-weight: 500;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #000;
-  margin-bottom: 40px;
-}
-
-.intro-section a.collaborate-mail-link {
-  display: inline;
-  font-size: inherit;
-  font-family: inherit;
-  font-weight: 700;
-  color: inherit;
-  margin: 0;
-  text-align: inherit;
-  text-decoration: none;
-}
-
-.intro-section a:hover {
-  text-decoration: underline;
+    display: block;
+    text-align: center;
 }
 
 .contribute-image {
-    width: 35%;
-    margin-top: 10px;
+    width: clamp(120px, 35%, 600px);
+    margin-top: clamp(6px, 1vw, 10px);
+    border-radius: clamp(2px, 0.4vw, 6px);
 }
 
-.collaborators-title {
-  width: 60vw;
-  margin: 40px auto 20px auto;
-  font-size: 20px;
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  text-align: left;
-}
+/* --------------------------------------------- */
+/* MOBILE BREAKPOINT */
+/* --------------------------------------------- */
 
-.contributors-section {
-  width: 80vw;
-  margin: 20px auto 60px auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-family: "Inter", sans-serif;
-  color: #222;
-}
+@media (max-width: 900px) {
 
-.contributor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 33%;
-  text-align: center;
-}
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        z-index: 1001;
+    }
 
-.contributor img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0px;
-  margin-bottom: 10px;
-}
+    #mobileMenu {
+        position: fixed;
+        top: clamp(70px, 4vw, 100px); 
+        left: 0;
+        width: 100%;
+        background: #F9D3E6;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(10px, 3vw, 20px);
+        padding: clamp(10px, 3vw, 20px) 0;
+        display: none;
+        margin-right: 0;
+        z-index: 1000;
+    }
 
-.contributor-role {
-  font-size: 14px;
-  line-height: 1.3;
-  margin: 0;
-margin-bottom: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    #mobileMenu.open {
+        display: flex;
+    }
+
+    #mobileMenu a {
+        font-size: clamp(18px, 4vw, 26px);
+        line-height: 1.4;
+    }
+
+    .social-bar {
+        position: static;
+        display: flex;          
+        justify-content: flex-end;
+        margin-top: clamp(10px, 3vw, 20px);
+        width: 100%;
+        padding-right: clamp(10px, 3vw, 20px);
+    }
+
+    .flag {
+        margin-top: clamp(70px, 8vw, 100px);
+    }
+
+    .flag-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    header.menu-open {
+        height: clamp(70px, 4vw, 100px);
+    }
+
+    header.menu-open #logo {
+        font-size: clamp(32px, 2.4vw, 60px); 
+    }
+
+    .team-section {
+        flex-direction: row;
+        justify-content: center;
+        gap: clamp(10px, 3vw, 20px);
+        align-items: flex-start; 
+    }
+
+    .team-member {
+        width: 33%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member img {
+        width: 100%;
+        aspect-ratio: 3 / 4;   
+        object-fit: cover;
+        border-radius: clamp(2px, 0.4vw, 6px);
+        flex-shrink: 0;        
+    }
+
+    .team-role {
+        margin-top: clamp(6px, 1vw, 10px);
+        min-height: 3.5em;     
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-wrapper,
+    .magazine-wrapper,
+    .article-wrapper,
+    .collaborate,
+    /* .team-section, */
+    .selector,
+    .articles-grid {
+        width: 80% !important; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-wrapper,
+    .magazine-wrapper,
+    .article-wrapper {
+        max-width: none;
+    }
+
+    .magazine-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
 }

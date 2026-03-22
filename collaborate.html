@@ -2,19 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Colabora – Almazuela</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Colabora · Almazuela</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
     <header id="js-header">
-        <h1 id="logo">ALMAZUELA</h1>
-        <nav>
-            <a class="headerLink">ARTÍCULOS</a>
+        <h1 id="logo">
+            <a href="aboutUs.html">ALMAZUELA</a>
+        </h1>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav id="mobileMenu">
+            <a class="headerLink" href="index.html">ARTÍCULOS</a>
             <a class="headerLink" href="aboutUs.html">SOMOS</a>
             <a class="headerLink" href="magazine.html">LA REVISTA</a>
-            <a class="headerLinkSelected" href="collaborate.html">COLABORA</a>
+            <a class="headerLinkSelected">COLABORA</a>
         </nav>
     </header>
+
 
     <div class="flag">
         <img class="flag-img" src="img/Header.png" alt="flag"/>
@@ -29,31 +38,37 @@
         </div>
     </div>
 
-  <main class="collaborate">
-    <section class="intro-section">
-      <p>
-        Almazuela está abierta a colaboraciones. Si tienes un proyecto, una idea o incluso si quieres aportar tu granito de arena y no sabes cómo, ponte en contacto con nosotras. Puedes escribirnos a <a class="collaborate-mail-link" href="mailto:almazuelarevista@gmail.com">almazuelarevista@gmail.com</a> o rellenar este formulario:
-      </p>
-      <p>
-        <a href="https://www.paypal.com/ncp/payment/ZNY7BUGHACCYN" target="_blank">
-          <img class="contribute-image" src="img/FORMULARIO1.png"alt="Nuria y Patri">
-        </a>
-      </p>
-      <p>
-        Si quieres y puedes apoyarnos económicamente para seguir creciendo:
-      </p>
-      <p>
-        <a href="https://www.paypal.com/ncp/payment/ZNY7BUGHACCYN" target="_blank">
-          <img class="contribute-image" src="img/APÓYANOS1.png"alt="Nuria y Patri">
+    <main class="collaborate">
 
-        </div>
-        </a>
-      </p>
-    </section>
-  </main>
+        <section class="intro-section">
 
+            <p>
+                Almazuela está abierta a colaboraciones. Si tienes un proyecto, una idea o incluso si quieres aportar tu granito de arena y no sabes cómo, ponte en contacto con nosotras. Puedes escribirnos a 
+                <a class="collaborate-mail-link" href="mailto:almazuelarevista@gmail.com">almazuelarevista@gmail.com</a> 
+                o rellenar este formulario:
+            </p>
 
-    
-  </section>
+            <p>
+                <a href="https://www.paypal.com/ncp/payment/ZNY7BUGHACCYN" target="_blank">
+                    <img class="contribute-image" src="img/FORMULARIO1.png" alt="Formulario de contacto">
+                </a>
+            </p>
+
+            <p>
+                Si quieres y puedes apoyarnos económicamente para seguir creciendo:
+            </p>
+
+            <p>
+                <a href="https://www.paypal.com/ncp/payment/ZNY7BUGHACCYN" target="_blank">
+                    <img class="contribute-image" src="img/APÓYANOS1.png" alt="Apóyanos">
+                </a>
+            </p>
+
+        </section>
+
+        <script src="js/header.js"></script>
+
+    </main>
+
 </body>
 </html>
