@@ -1,15 +1,6 @@
 async function loadMagazines() {
 
-
-let csvPath;
-
-    if (location.hostname === "localhost" || location.protocol === "file:") {
-        csvPath = "../csv/_magazines.csv";
-    } else {
-        csvPath = "csv/_magazines.csv";
-    }
-
-    const response = await fetch(csvPath);
+    const response = await fetch("csv/magazines.csv");
     const text = await response.text();
     const lines = text.trim().split("\n");
 

@@ -1,13 +1,5 @@
 async function loadCSVList() {
-    let jsonPath;
-
-    if (location.protocol === "file:" || location.hostname === "localhost") {
-        jsonPath = "../csv/index.json";
-    } else {
-        jsonPath = "csv/index.json";
-    }
-
-const response = await fetch(jsonPath);
+    const response = await fetch("csv/index.json");
 
     return await response.json();
 }
