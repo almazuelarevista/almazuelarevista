@@ -270,7 +270,7 @@ header.smaller #mobileMenu a {
 
 .article-wrapper {
     width: clamp(260px, 33%, 900px);
-    margin: clamp(80px, 10vw, 150px) auto;
+    margin: clamp(60px, 6vw, 90px) auto clamp(40px, 4vw, 60px);
     font-family: "SegoeCustom";
     color: black;
 }
@@ -318,7 +318,7 @@ header.smaller #mobileMenu a {
 
 .magazine-wrapper {
     width: clamp(300px, 70%, 1800px);
-    margin: clamp(120px, 12vw, 180px) auto clamp(80px, 8vw, 120px);
+    margin: clamp(60px, 6vw, 90px) auto clamp(40px, 4vw, 60px);
     font-family: "SegoeCustom";
     color: black;
     text-align: center;
@@ -379,7 +379,7 @@ header.smaller #mobileMenu a {
 
 .about-wrapper {
     width: clamp(300px, 50%, 1250px);
-    margin: clamp(120px, 12vw, 180px) auto clamp(80px, 8vw, 120px);
+    margin: clamp(60px, 6vw, 90px) auto clamp(40px, 4vw, 60px);
     font-family: "SegoeCustom";
     color: black;
     text-align: center;
@@ -618,7 +618,6 @@ header.smaller #mobileMenu a {
     .magazine-wrapper,
     .article-wrapper,
     .collaborate,
-    /* .team-section, */
     .selector,
     .articles-grid {
         width: 80% !important; 
@@ -630,6 +629,7 @@ header.smaller #mobileMenu a {
     .magazine-wrapper,
     .article-wrapper {
         max-width: none;
+        margin: clamp(30px, 3vw, 45px) auto clamp(18px, 1.8vw, 30px);
     }
 
     .magazine-grid {
