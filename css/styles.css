@@ -325,7 +325,7 @@ header.smaller #mobileMenu a {
 
 .magazine-wrapper {
     width: clamp(300px, 70%, 1800px);
-    margin: clamp(60px, 6vw, 90px) auto clamp(40px, 4vw, 60px);
+    margin: clamp(40px, 5vw, 80px) auto clamp(30px, 4vw, 60px);
     font-family: "SegoeCustom";
     color: black;
     text-align: center;
