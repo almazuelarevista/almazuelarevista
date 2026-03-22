@@ -9,6 +9,31 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "SegoeCustom";
+    src: url("fonts/segoeuitihs.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SegoeCustom";
+    src: url("fonts/segoeuitihbd.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "SegoeCustom";
+    src: url("fonts/segoeuitihsi.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SegoeCustom";
+    src: url("fonts/segoeuitihsz.ttf") format("truetype");
+    font-weight: 300;
+}
+
 *,
 *::before,
 *::after {
@@ -73,7 +98,7 @@ header {
 }
 
 #mobileMenu a {
-    font-family: "Segoe UI";
+    font-family: "SegoeCustom";
     font-size: clamp(18px, 1.2vw, 24px);
     color: #D7351F;
     font-weight: 400;
@@ -167,7 +192,7 @@ header.smaller #mobileMenu a {
     background: none;
     border: none;
     font-size: clamp(16px, 1.2vw, 22px);
-    font-family: 'Segoe UI';
+    font-family: 'SegoeCustom';
     color: #888;
     cursor: pointer;
     padding: 0;
@@ -196,7 +221,7 @@ header.smaller #mobileMenu a {
 
 .articles {
     cursor: pointer;
-    font-family: "Segoe UI";
+    font-family: "SegoeCustom";
 }
 
 .articles img {
@@ -224,7 +249,7 @@ header.smaller #mobileMenu a {
 .article-wrapper {
     width: clamp(260px, 33%, 900px);
     margin: clamp(80px, 10vw, 150px) auto;
-    font-family: "Segoe UI";
+    font-family: "SegoeCustom";
     color: black;
 }
 
@@ -272,7 +297,7 @@ header.smaller #mobileMenu a {
 .magazine-wrapper {
     width: clamp(300px, 70%, 1800px);
     margin: clamp(120px, 12vw, 180px) auto clamp(80px, 8vw, 120px);
-    font-family: "Segoe UI";
+    font-family: "SegoeCustom";
     color: black;
     text-align: center;
 }
@@ -296,7 +321,7 @@ header.smaller #mobileMenu a {
 }
 
 .magazine-name {
-    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
+    font-family: "Bright Sunshine", "SegoeCustom", sans-serif;
     font-size: clamp(40px, 4vw, 70px);
     font-weight: normal;
     color: #D7351F;
@@ -333,7 +358,7 @@ header.smaller #mobileMenu a {
 .about-wrapper {
     width: clamp(300px, 50%, 1250px);
     margin: clamp(120px, 12vw, 180px) auto clamp(80px, 8vw, 120px);
-    font-family: "Segoe UI";
+    font-family: "SegoeCustom";
     color: black;
     text-align: center;
 }
@@ -347,7 +372,7 @@ header.smaller #mobileMenu a {
 }
 
 .about-title-2 {
-    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
+    font-family: "Bright Sunshine", "SegoeCustom", sans-serif;
     font-size: clamp(80px, 8vw, 200px);
     color: #D7351F;
     margin-top: 0;
@@ -355,7 +380,7 @@ header.smaller #mobileMenu a {
 }
 
 .about-title-3 {
-    font-family: "Bright Sunshine", "Segoe UI", sans-serif;
+    font-family: "Bright Sunshine", "SegoeCustom", sans-serif;
     font-size: clamp(50px, 4vw, 100px);
     color: #D7351F;
     margin-top: 0;
@@ -420,7 +445,7 @@ header.smaller #mobileMenu a {
 .team-member {
     width: 33%;
     text-align: center;
-    font-family: "Segoe UI";
+    font-family: "SegoeCustom";
 }
 
 .team-member img {
