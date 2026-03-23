@@ -294,7 +294,7 @@ header.smaller #mobileMenu a {
 }
 
 .article-title {
-    font-size: clamp(24px, 2vw, 36px);
+    font-size: clamp(28px, 2vw, 36px);
     font-weight: 700;
     margin-bottom: clamp(6px, 0.8vw, 10px);
 }
@@ -306,7 +306,7 @@ header.smaller #mobileMenu a {
 }
 
 .article-subtitle {
-    font-size: clamp(18px, 1.6vw, 24px);
+    font-size: clamp(13px, 1.6vw, 16px);
     font-weight: 700;
     color: #D7351F;
     margin-bottom: clamp(10px, 1.2vw, 20px);
