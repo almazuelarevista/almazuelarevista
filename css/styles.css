@@ -331,6 +331,102 @@ header.smaller #mobileMenu a {
 }
 
 /* --------------------------------------------- */
+/* CAROUSEL */
+/* --------------------------------------------- */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: clamp(200px, 16vw, 420px);
+    margin: clamp(10px, 1.2vw, 20px) auto 0;
+    user-select: none;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-slide.active {
+    display: flex;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: clamp(2px, 0.4vw, 6px);
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-caption {
+    font-size: clamp(12px, 0.8vw, 14px);
+    font-style: italic;
+    color: #555;
+    margin-top: clamp(4px, 0.5vw, 8px);
+    text-align: center;
+    font-family: "SegoeCustom", sans-serif;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(215, 53, 31, 0.75);
+    border: none;
+    color: #fff;
+    font-size: clamp(18px, 1.5vw, 28px);
+    width: clamp(24px, 2vw, 36px);
+    height: clamp(24px, 2vw, 36px);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 2;
+    line-height: 1;
+}
+
+.carousel-btn:hover {
+    background: #D7351F;
+}
+
+.carousel-prev { left: clamp(-14px, -1.2vw, -20px); }
+.carousel-next { right: clamp(-14px, -1.2vw, -20px); }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: clamp(5px, 0.5vw, 8px);
+    margin-top: clamp(6px, 0.8vw, 10px);
+}
+
+.carousel-dot {
+    width: clamp(6px, 0.5vw, 9px);
+    height: clamp(6px, 0.5vw, 9px);
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.carousel-dot.active {
+    background: #D7351F;
+}
+
+.article-carousel {
+    max-width: 100%;
+    margin: clamp(10px, 1.5vw, 20px) auto clamp(4px, 0.6vw, 8px);
+}
+
+/* --------------------------------------------- */
 /* MAGAZINE */
 /* --------------------------------------------- */
 
