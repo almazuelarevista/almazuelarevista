@@ -128,6 +128,7 @@ header {
     all: inherit;         
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
 }
 
 
@@ -182,12 +183,15 @@ header.smaller #mobileMenu a {
     right: clamp(10px, 3vw, 80px);
     margin-top: clamp(10px, 1vw, 20px);
     display: flex;
+    align-items: center;
     gap: clamp(10px, 1.2vw, 20px);
+    --bar-size: clamp(30px, 2.4vw, 44px);
 }
 
 .social-icon {
-    width: clamp(20px, 2vw, 35px);
-    height: clamp(20px, 2vw, 35px);
+    display: block;
+    width: var(--bar-size);
+    height: var(--bar-size);
     object-fit: contain;
     cursor: pointer;
     transition: transform 0.2s;
@@ -196,6 +200,37 @@ header.smaller #mobileMenu a {
 
 .social-icon:hover {
     transform: scale(1.15);
+}
+
+.shop-btn {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 0.6vw, 10px);
+    height: var(--bar-size);
+    background-color: #D7351F;
+    padding: 0 clamp(14px, 1.4vw, 22px);
+    border-radius: clamp(4px, 2vw, 10px);
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.shop-btn:hover {
+    background-color: #b62c19;
+    transform: scale(1.05);
+}
+
+.shop-btn span {
+    font-family: "SegoeCustom";
+    font-weight: 700;
+    font-size: clamp(14px, 0.9vw, 18px);
+    color: #fcfcfc;
+    line-height: 1;
+}
+
+.shop-icon {
+    width: clamp(16px, 1.4vw, 24px);
+    height: clamp(16px, 1.4vw, 24px);
+    object-fit: contain;
 }
 
 /* --------------------------------------------- */
@@ -563,8 +598,8 @@ header.smaller #mobileMenu a {
 .team-section {
     width: 100%;
     margin: clamp(40px, 4vw, 60px) auto clamp(80px, 8vw, 120px);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: clamp(20px, 3vw, 40px);
 }
 
@@ -579,7 +614,7 @@ header.smaller #mobileMenu a {
 }
 
 .team-member {
-    width: 33%;
+    width: 100%;
     text-align: center;
     font-family: "SegoeCustom";
 }
@@ -638,6 +673,18 @@ header.smaller #mobileMenu a {
 /* MOBILE BREAKPOINT */
 /* --------------------------------------------- */
 
+@media (max-width: 1000px)
+{
+    .social-bar {
+        position: static;
+        display: flex;          
+        justify-content: flex-end;
+        margin-top: clamp(10px, 3vw, 20px);
+        width: 100%;
+        padding-right: clamp(10px, 3vw, 20px);
+    }
+}
+
 @media (max-width: 900px) {
 
     .menu-toggle {
@@ -670,15 +717,6 @@ header.smaller #mobileMenu a {
         line-height: 1.4;
     }
 
-    .social-bar {
-        position: static;
-        display: flex;          
-        justify-content: flex-end;
-        margin-top: clamp(10px, 3vw, 20px);
-        width: 100%;
-        padding-right: clamp(10px, 3vw, 20px);
-    }
-
     .flag {
         margin-top: clamp(70px, 8vw, 100px);
     }
@@ -698,14 +736,11 @@ header.smaller #mobileMenu a {
     }
 
     .team-section {
-        flex-direction: row;
-        justify-content: center;
-        gap: clamp(10px, 3vw, 20px);
-        align-items: flex-start; 
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .team-member {
-        width: 33%;
+        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
